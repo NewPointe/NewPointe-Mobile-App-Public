@@ -1,0 +1,20 @@
+<custom-nav>
+    <ScrollView>
+        <GridLayout [columns]="colSizing" rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto" class="padding-sm">
+
+            <Image row="0" col="0" class="margin-sm" [colspan]="colCount" src="~/images/App-header-image.png" stretch="aspectFill"></Image>
+
+            <GridLayout row="1" col="0" [colspan]="colCount" class="margin-sm round" (tap)="navigateTo('app:/live')" *ngIf="IsLive">
+                <Image src="~/images/Live.png" class="round"></Image>
+                <Image src="~/images/LIVE text.png" class="round"></Image>
+            </GridLayout>
+
+            <GridLayout *ngFor="let tile of tiles; let i = index;" [row]="getRowNum(i)" [col]="getColNum(i)" class="margin-sm round"
+                (tap)="tile.onTap(navigateTo)">
+                <Image [src]="tile.tile" class="round" stretch="aspectFill"></Image>
+                <Label [text]="tile.title" class="hometile-label round"></Label>
+            </GridLayout>
+
+        </GridLayout>
+    </ScrollView>
+</custom-nav>

@@ -1,0 +1,60 @@
+<ActionBar [title]="title">
+    <!-- Back Button -->
+    <NavigationButton *ngIf="showBack && !isIos" text="Back" icon="res://ic_arrow_back_white" (tap)="goBack()"></NavigationButton>
+    <NavigationButton *ngIf="showBack && isIos" text="Back" (tap)="goBack()"></NavigationButton>
+
+    <!-- Menu Button -->
+    <NavigationButton *ngIf="!showBack && !isIos" icon="res://ic_menu_white" (tap)="drawer.toggleDrawerState()"></NavigationButton>
+    <ActionItem *ngIf="!showBack && isIos" icon="res://ic_menu_white" (tap)="drawer.toggleDrawerState()"></ActionItem>
+
+    <!-- Now Playing Button -->
+    <ActionItem *ngIf="isNowPlaying" (tap)="navigateTo('app:/audioplayer', false)" icon="res://ic_music_note_white" ios.position="right"
+        android.position="actionBar"></ActionItem>
+</ActionBar>
+
+<RadSideDrawer #drawerComponent id="drawer" ios:showOverNavigation="true">
+    <ScrollView tkDrawerContent #scrollComponent>
+        <StackLayout>
+
+            <!--<Image src="res://logo_main_nav" horizontalAlignment="center" stretch="aspectFill"></Image>-->
+
+            <!--<Label [text]="loggedInText" *ngIf="isLoggedIn()"></Label>-->
+
+            <GridLayout backgroundColor="#404040" marginTop="-24">
+
+                <Image src="~/images/9by16.png" stretch="aspectFill"></Image>
+                <Image src="res://logo_main_nav" horizontalAlignment="center" stretch="aspectFill" marginTop="24"></Image>
+
+                <StackLayout verticalAlignment="bottom">
+
+                    <GridLayout class="drawerSubheader">
+                        <StackLayout verticalAlignment="center">
+                            <Label class="drawerSubheaderTitle" [text]="loggedInName"></Label>
+                            <Label class="drawerSubheaderSubtitle" [text]="loggedInEmail"></Label>
+                        </StackLayout>
+                    </GridLayout>
+
+                    <GridLayout class="drawerSpacer"></GridLayout>
+
+                </StackLayout>
+
+            </GridLayout>
+
+            <GridLayout class="drawerSpacer"></GridLayout>
+
+            <StackLayout *ngFor="let page of pageList">
+                <StackLayout *ngIf="page.divider && (!page.showIf || page.showIf(this))" class="drawerDivider"></StackLayout>
+                <GridLayout class="drawerItem" *ngIf="!page.divider && (!page.showIf || page.showIf(this))" orientation="horizontal" (tap)="page.onTap(this)">
+                    <Label class="drawerItemIcon material-icon" [text]="page.icon"></Label>
+                    <Label class="drawerItemLabel" [text]="page.title"></Label>
+                </GridLayout>
+            </StackLayout>
+
+            <GridLayout class="drawerSpacer"></GridLayout>
+
+        </StackLayout>
+    </ScrollView>
+    <StackLayout tkMainContent backgroundColor="#fff" [class]="contentClass">
+        <ng-content></ng-content>
+    </StackLayout>
+</RadSideDrawer>

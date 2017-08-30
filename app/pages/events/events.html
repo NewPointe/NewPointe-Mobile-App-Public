@@ -1,0 +1,14 @@
+<custom-nav backgroundImage="">
+    <loading-view [loadingState]="loadingState" errorMessage="Error loading event data. Please make sure you are connected to the internet.">
+        <GridLayout rows="*, auto" backgroundColor="#ffffff">
+
+            <RadCalendar row="0" [eventSource]="events" eventsViewMode="Inline"></RadCalendar>
+
+            <DockLayout row="1" ios:padding="10">
+                <Button text="<" dock="left" (tap)="calendar.navigateBack()"></Button>
+                <Button text=">" dock="right" (tap)="calendar.navigateForward()"></Button>
+                <Button text="Today" (tap)="goToToday()"></Button>
+            </DockLayout>
+        </GridLayout>
+    </loading-view>
+</custom-nav>

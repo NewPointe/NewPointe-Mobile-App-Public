@@ -1,0 +1,13 @@
+<custom-nav title="About">
+    <loading-view [loadingState]="loadingState" errorMessage="Error loading About data. Please make sure you are connected to the internet.">
+        <ScrollView>
+            <StackLayout class="main-content">
+
+                <Image src="res://logo" class="logo-header"></Image>
+
+                <Label textWrap="true" [text]="aboutText"></Label>
+
+            </StackLayout>
+        </ScrollView>
+    </loading-view>
+</custom-nav>

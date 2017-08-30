@@ -1,0 +1,15 @@
+// iOS
+126x126 iOS/Assets.xcassets/LaunchScreen.Center.imageset/LaunchScreen-Center.png
+x2 iOS/Assets.xcassets/LaunchScreen.Center.imageset/LaunchScreen-Center@2x.png
+x3 iOS/Assets.xcassets/LaunchScreen.Center.imageset/LaunchScreen-Center@3x.png
+
+x1 iOS/icon.png
+x2 iOS/icon@2x.png
+x3 iOS/icon@3x.png
+
+// Android
+x0.75 Android/drawable-ldpi/icon.png
+x1 Android/drawable-mdpi/icon.png
+x1.5 Android/drawable-hdpi/icon.png
+x2 Android/drawable-xhdpi/icon.png
+x3 Android/drawable-xxhdpi/icon.png

@@ -1,0 +1,16 @@
+<custom-nav title="Now Playing">
+    <DockLayout height="100%" backgroundColor="#404040">
+        <DockLayout dock="top" backgroundColor="#fff" padding="5">
+            <StackLayout>
+                <Label [text]="playerTitle" horizontalAlignment="center" fontSize="24"></Label>
+                <Label [text]="playerSubtitle" horizontalAlignment="center"></Label>
+            </StackLayout>
+        </DockLayout>
+        <DockLayout dock="bottom" backgroundColor="#fff" padding="5">
+            <Label dock="left" [text]="playerPlayButtonText" class="button-icon" (tap)="onPlayButtonClick()"></Label>
+            <Label dock="right" [text]="playerTimecodeText" fontSize="12" textAlignment="center" [width]="playerTimecodeWidth" verticalAlignment="center"></Label>
+            <Seekbar [value]="playerTimelineProgress" (seek)="onSeekEvent($event)"></Seekbar>
+        </DockLayout>
+        <Image [src]="playerImageURI"></Image>
+    </DockLayout>
+</custom-nav>

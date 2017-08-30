@@ -1,0 +1,26 @@
+<custom-nav title="Prayer">
+    <ScrollView>
+        <StackLayout class="main-content">
+
+            <Label class="heading center" text="Prayer and Praises"></Label>
+
+            <label textWrap="true" text="Share your prayer requests and praises with us, and let us come along side you to pray or to celebrate!"
+                marginBottom="20"></label>
+
+            <TextField #firstNameElement hint="First Name" [(ngModel)]="prayer.FirstName" [isEnabled]="!isBusy" autocapitalizationType="words"
+                autocorrect="false" returnKeyType="next" (returnPress)="tryFocusElement(lastNameElement)"></TextField>
+
+            <TextField #lastNameElement hint="Last Name" [(ngModel)]="prayer.LastName" [isEnabled]="!isBusy" autocapitalizationType="words"
+                autocorrect="false" returnKeyType="next" (returnPress)="tryFocusElement(emailElement)"></TextField>
+
+            <TextField #emailElement hint="Email Address" [(ngModel)]="prayer.Email" [isEnabled]="!isBusy" autocapitalizationType="none" autocorrect="false"
+                keyboardType="email" returnKeyType="next" (returnPress)="tryFocusElement(prayerElement)"></TextField>
+
+            <TextView #prayerElement hint="How can we pray for you?" [(ngModel)]="prayer.Text" [isEnabled]="!isBusy"></TextView>
+
+            <ActivityIndicator *ngIf="isBusy" [busy]="isBusy" class="btn btn-newpointe"></ActivityIndicator>
+            <Button text="Send Prayer" *ngIf="!isBusy" [isEnabled]="!isBusy" class="btn btn-newpointe" (tap)="submit()"></Button>
+
+        </StackLayout>
+    </ScrollView>
+</custom-nav>

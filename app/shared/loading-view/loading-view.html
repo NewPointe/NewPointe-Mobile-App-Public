@@ -1,0 +1,7 @@
+<GridLayout height="100%" width="100%">
+    <StackLayout><ng-content></ng-content></StackLayout>
+    <StackLayout *ngIf="loadingState == 0" height="100%" width="100%" backgroundColor="rgba(0,0,0,0.2)"></StackLayout>
+    <StackLayout *ngIf="loadingState == -1" height="100%" width="100%" backgroundColor="rgba(0,0,0,0.5)"></StackLayout>
+    <ActivityIndicator *ngIf="loadingState == 0" busy="true" verticalAlignment="center" horizontalAlignment="center"></ActivityIndicator>
+    <Label *ngIf="loadingState == -1" verticalAlignment="center" horizontalAlignment="center" textAlignment="center" [text]="errorMessage" color="#ffffff" textWrap="true" margin="15"></Label>
+</GridLayout>

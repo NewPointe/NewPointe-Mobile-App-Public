@@ -1,0 +1,178 @@
+﻿@import url("~/platform.css");
+
+Page {
+    background-color: #404040;
+}
+
+ActionBar {
+    background-color: #8bc540;
+    color: white;
+}
+
+Label {
+    color: #333;
+    font-size: 16;
+}
+
+[tkDrawerContent] {
+    background-color: #fff;
+}
+
+.drawerSubheader {
+    padding-left: 16;
+    padding-right: 16;
+    height: 56;
+}
+.drawerSubheaderTitle {
+    color: #fff;
+    font-size: 14;
+    font-family: "Roboto-Medium";
+    vertical-align: center;
+}
+.drawerSubheaderSubtitle {
+    color: #fff;
+    font-size: 14;
+    font-family: "Roboto-Regular";
+    vertical-align: center;
+}
+.drawerItem {
+    padding-left: 16;
+    padding-right: 16;
+    height: 48;
+}
+.drawerItemIcon {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 25;
+    vertical-align: center;
+}
+.drawerItemLabel {
+    color: #000;
+    font-size: 14;
+    font-family: "Roboto-Medium";
+    margin-left: 56; /* 72-16 */
+    vertical-align: center;
+}
+.drawerItemSubheading {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14;
+    font-family: "Roboto-Medium";
+    margin-left: 16;
+    vertical-align: center;
+}
+.drawerSpacer {
+    height: 8;
+}
+.drawerDivider {
+    height: 1;
+    background-color: #e0e0e0; 
+    margin-top: 8; 
+    margin-bottom: 8;
+}
+
+[tkMainContent],
+.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+}
+
+.logo-full {
+    horizontal-align: center;
+    width: 90%;
+    height: 100;
+    margin-top: 20;
+}
+
+.heading {
+    font-size: 26;
+    margin-top: 10;
+    margin-bottom: 10;
+}
+.heading2 {
+    font-size: 22;
+    margin-top: 10;
+    margin-bottom: 10;
+}
+
+.main-content{
+    padding: 20;
+}
+
+.center {
+    text-align: center;
+    horizontal-align: center;
+}
+.center-text {
+    text-align: center;
+    horizontal-align: center;
+}
+
+.btn {
+    border-radius: 1;
+    padding: 3 5;
+    height: 40;
+}
+.btn-rounded {
+    border-radius: 5;
+}
+.btn-newpointe {
+    color: #ffffff;
+    background-color: #8bc540;
+}
+.btn-grey {
+    color: #000000;
+    background-color: #ddd;
+}
+.margin-b {
+    margin-bottom: 15;
+}
+
+.material-icon {
+   font-family: 'Material Design Icons', 'materialdesignicons';
+}
+.font-gotham-black {
+   font-family: 'Gotham Black', 'gotham-black-webfont';
+}
+.font-gotham-bold {
+   font-family: 'Gotham Bold', 'gotham-bold-webfont';
+}
+.font-gotham-book {
+   font-family: 'Gotham Book', 'gotham-book-webfont';
+}
+.font-gotham-light {
+   font-family: 'Gotham Light', 'gotham-light-webfont';
+}
+.roboto-medium {
+   font-family: 'Roboto-Medium';
+}
+.roboto-regular {
+   font-family: 'Roboto-Regular';
+}
+
+TextField, TextView {
+  margin-bottom: 15;
+  font-size: 15;
+  padding: 10;
+  background-color: #efefef;
+}
+
+TextView{
+  height:100;
+}
+
+.margin-sm {
+    margin: 4;
+}
+.padding-sm {
+    padding: 4;
+}
+
+.round {
+    border-radius: 7;
+}
+
+.logo-header {
+    width: 400;
+    margin-bottom: 15;
+}

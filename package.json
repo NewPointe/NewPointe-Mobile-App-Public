@@ -1,0 +1,47 @@
+{
+  "name": "newpointe-app",
+  "version": "2.0.0",
+  "description": "NewPointe Mobile App",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "https://github.com/NewPointe/NewPointe-Mobile-App-Public",
+  "nativescript": {
+    "id": "org.newpointe.NewPointeCommunityChurch",
+    "tns-android": {
+      "version": "2.5.0"
+    },
+    "tns-ios": {
+      "version": "2.5.0"
+    }
+  },
+  "dependencies": {
+    "@angular/common": "~4.0.0",
+    "@angular/compiler": "~4.0.0",
+    "@angular/core": "~4.0.0",
+    "@angular/forms": "~4.0.0",
+    "@angular/http": "~4.0.0",
+    "@angular/platform-browser": "~4.0.0",
+    "@angular/platform-browser-dynamic": "~4.0.0",
+    "@angular/router": "~4.0.0",
+    "nativescript-angular": "~1.5.1",
+    "nativescript-angular-snapshot": "1.5.2-5.5.372.32",
+    "nativescript-iqkeyboardmanager": "^1.0.1",
+    "nativescript-np-audioplayer": "NewPointe/nativescript-np-audioplayer",
+    "nativescript-orientation": "~1.5.3",
+    "nativescript-swiss-army-knife": "^*",
+    "nativescript-telerik-ui-pro": "file:nativescript-ui-pro.tgz",
+    "nativescript-videoplayer": "~1.1.3",
+    "reflect-metadata": "~0.1.8",
+    "rxjs": "~5.2.0",
+    "tns-core-modules": "2.5.2",
+    "zone.js": "~0.8.2"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.24.1",
+    "babel-types": "6.24.1",
+    "babylon": "6.17.0",
+    "lazy": "1.0.11",
+    "nativescript-dev-android-snapshot": "0.0.9",
+    "nativescript-dev-typescript": "~0.3.5",
+    "typescript": "~2.1.0"
+  }
+}

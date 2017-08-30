@@ -1,0 +1,10 @@
+.hometile-label {
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    font-family: 'Roboto-Medium';
+    font-size: 14;
+    vertical-align: bottom;
+    text-transform: uppercase;
+    padding: 10;
+}

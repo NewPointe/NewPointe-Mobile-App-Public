@@ -1,0 +1,11 @@
+// iOS
+303x77 iOS/logo.png
+x2 iOS/logo@2x.png
+x3 iOS/logo@3x.png
+
+// Android
+x0.75 Android/drawable-ldpi/logo.png
+x1 Android/drawable-mdpi/logo.png
+x1.5 Android/drawable-hdpi/logo.png
+x2 Android/drawable-xhdpi/logo.png
+x3 Android/drawable-xxhdpi/logo.png

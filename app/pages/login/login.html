@@ -1,0 +1,21 @@
+<custom-nav title="Login">
+    <ScrollView>
+        <StackLayout class="main-content">
+
+            <Image src="res://logo" class="logo-header"></Image>
+
+            <TextField #username hint="Username" returnKeyType="next" (returnPress)="this.tryFocusElement(this.passwordElement)"
+                [(ngModel)]="user.Username" [isEnabled]="!isLoading" autocorrect="false" autocapitalizationType="none"></TextField>
+
+            <TextField #password hint="Password" secure="true" returnKeyType="done" (returnPress)="login()" [(ngModel)]="user.Password"
+                [isEnabled]="!isLoading" autocorrect="false" autocapitalizationType="none"></TextField>
+
+            <ActivityIndicator *ngIf="isLoading" [busy]="isLoading" class="btn btn-newpointe"></ActivityIndicator>
+            <Button text="Login" *ngIf="!isLoading" [isEnabled]="!isLoading" class="btn btn-newpointe" (tap)="login()"></Button>
+
+            <Label text="Register" [isEnabled]="!isLoading" class="heading center-text" (tap)="signUp()"></Label>
+            <Label text="Skip Login" [isEnabled]="!isLoading" class="center-text" (tap)="skipLogin()"></Label>
+
+        </StackLayout>
+    </ScrollView>
+</custom-nav>

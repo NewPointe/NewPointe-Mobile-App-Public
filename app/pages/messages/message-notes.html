@@ -1,0 +1,9 @@
+<ActionBar title="Notes">
+    <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+    <ActionItem ios.systemIcon="7" android.systemIcon="ic_menu_edit" ios.position="right" (tap)="goCustomNotes()"></ActionItem>
+</ActionBar>
+<loading-view [loadingState]="loadingState" errorMessage="Error loading message notes. Please make sure you are connected to the internet.">
+
+    <WebView [url]="link" (loadFinished)="onLoadFinished()" height="100%" width="100%"></WebView>
+
+</loading-view>

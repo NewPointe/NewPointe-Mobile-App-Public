@@ -1,0 +1,10 @@
+<custom-nav title="My Notes">
+    <loading-view [loadingState]="loadingState" errorMessage="Error loading your notes. Please make sure you are logged in and connected to the internet.">
+        <DockLayout height="100%" margin="0" padding="0">
+
+            <Button dock="bottom" text="Save Notes" class="btn btn-newpointe" (tap)="submit()"></Button>
+            <TextView #note hint="Enter your notes here" [(ngModel)]="customNote.Notes" height="100%" margin="0" [editable]="noteBoxEnabled"> </TextView>
+
+        </DockLayout>
+    </loading-view>
+</custom-nav>

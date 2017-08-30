@@ -1,0 +1,32 @@
+<custom-nav>
+    <loading-view [loadingState]="loadingState" errorMessage="Error loading message data. Please make sure you are connected to the internet.">
+        <ScrollView backgroundColor="#fff" height="100%">
+            <StackLayout *ngIf="loadingState == 1">
+                <SegmentedBar [items]="navbarItems" (selectedIndexChanged)="tabIndexChanged($event)"></SegmentedBar>
+
+                <StackLayout class="main-content">
+                    <Label [text]="currentItem.Title" class="heading center center-text"></Label>
+                    <Label [text]="currentItem.Speaker" class="center center-text"></Label>
+                    <Label [text]="currentItem.SpeakerTitle" class="center center-text"></Label>
+                    <Label [text]="currentItem.Date" class="center center-text margin-b"></Label>
+
+                    <GridLayout *ngIf="showVideo" (tap)="goToVideo()" class="video-preview" backgroundColor="#aaa" margin="10 0">
+                        <Image [src]="currentItem.VimeoImage"></Image>
+                        <Image src="res://playbutton" horizontalAlignment="center" verticalAlignment="center" width="25%" margin="20"></Image>
+                    </GridLayout>
+
+                    <Button *ngIf="showPodcast" class="btn btn-newpointe margin-b" text="Play Podcast" (tap)="togglePlayAudio()"></Button>
+
+                    <Label textWrap="true" [text]="currentItem.Content" marginBottom="20"></Label>
+
+                    <Button text="My Notes" (tap)="launchMyNotes()" class="btn btn-newpointe margin-b"></Button>
+                    <StackLayout class="drawerDivider"></StackLayout>
+                    <Label text="Downloads:" class="heading2 center center-text margin-b"></Label>
+                    <Button *ngIf="showNotes" text="Message Notes" (tap)="launchNotes()" class="btn btn-newpointe margin-b"></Button>
+                    <Button *ngIf="showTalk" text="Talk It Over Guide" (tap)="launchTalk()" class="btn btn-newpointe margin-b"></Button>
+                    <Button *ngIf="showPodcast" text="Podcast" (tap)="launchPodcast()" class="btn btn-newpointe"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </loading-view>
+</custom-nav>

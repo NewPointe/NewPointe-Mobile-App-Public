@@ -1,0 +1,9 @@
+.button-icon {
+    height: 40;
+    width: 40;
+    font-family: 'Material Design Icons', 'materialdesignicons';
+    font-size: 30;
+    text-align: center;
+    vertical-align: center;
+    padding: 4;
+}

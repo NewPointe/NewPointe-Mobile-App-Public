@@ -1,0 +1,21 @@
+<custom-nav>
+    <ScrollView>
+        <StackLayout class="main-content">
+
+            <Label class="title-label center" text="Update Your Profile"></Label>
+
+            <TextField #firstName hint="First Name" [(ngModel)]="user.FirstName" [isEnabled]="!isBusy" autocapitalizationType="words"
+                autocorrect="false" returnKeyType="next" (returnPress)="tryFocusElement(lastNameElement)"></TextField>
+
+            <TextField #lastName hint="Last Name" [(ngModel)]="user.LastName" [isEnabled]="!isBusy" autocapitalizationType="words" autocorrect="false"
+                returnKeyType="next" (returnPress)="tryFocusElement(emailElement)"></TextField>
+
+            <TextField #email hint="Email Address" [(ngModel)]="user.Email" [isEnabled]="!isBusy" autocapitalizationType="none" autocorrect="false"
+                keyboardType="email" returnKeyType="done" (returnPress)="submit()"></TextField>
+
+            <ActivityIndicator *ngIf="isBusy" [busy]="isBusy" class="btn btn-newpointe"></ActivityIndicator>
+            <Button text="Update" *ngIf="!isBusy" [isEnabled]="!isBusy" class="btn btn-newpointe" (tap)="submit()"></Button>
+
+        </StackLayout>
+    </ScrollView>
+</custom-nav>

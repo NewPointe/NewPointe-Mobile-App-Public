@@ -1,0 +1,31 @@
+<custom-nav title="The Daily">
+    <loading-view [loadingState]="loadingState" errorMessage="Error loading The Daily. Please make sure you are connected to the internet.">
+        <DockLayout height="100%">
+
+            <GridLayout dock="bottom" rows="auto" columns="*,*" ios:padding="10">
+                <Button text="< Previous" row="0" col="0" (tap)="tapPrevious()" *ngIf="showPrevious"></Button>
+                <Button text="Next >" row="0" col="1" (tap)="tapNext()" *ngIf="showNext"></Button>
+            </GridLayout>
+
+            <ScrollView #scrollView>
+                <StackLayout>
+                    <Image src="res://the_daily" class="daily-logo"></Image>
+                    <StackLayout class="main-content" (swipe)="onSwipe($event)">
+
+                        <Label textWrap="true" [text]="currentDaily?.Title" class="center center-text" fontSize="28"></Label>
+
+                        <Label textWrap="true" [text]="currentDaily?.Date" class="center center-text" margin="10"></Label>
+
+                        <!--<Label textWrap="true" [text]="currentDaily?.Content" class="margin-b"></Label>-->
+                        <WebView [src]="currentDaily?.Content || ''" class="margin-b" minHeight="500" width="100%"></WebView>
+
+                        <Button *ngIf="showPDF" text="Download The Daily PDF" (tap)="launchPDF()" class="btn btn-newpointe margin-b "></Button>
+
+                        <Button *ngIf="showScripture" text="Download Scripture Cards" (tap)="launchScripture()" class="btn btn-newpointe"></Button>
+
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </DockLayout>
+    </loading-view>
+</custom-nav>

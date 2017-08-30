@@ -1,0 +1,24 @@
+<custom-nav>
+    <loading-view [loadingState]="loadingState" errorMessage="Error loading message data. Please make sure you are connected to the internet.">
+        <DockLayout height="100%">
+
+            <GridLayout dock="bottom" rows="auto" columns="*,*" ios:padding="10">
+                <Button text="< Previous" row="0" col="0" (tap)="tapPrevious()" *ngIf="showPrevious"></Button>
+                <Button text="Next >" row="0" col="1" (tap)="tapNext()" *ngIf="showNext"></Button>
+            </GridLayout>
+
+            <ScrollView #scrollView>
+
+                <GridLayout [columns]="colSizing" rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto" class="padding-sm">
+                    <GridLayout *ngFor="let message of currentMessages; let i = index;" [row]="getRowNum(i)" [col]="getColNum(i)" class="margin-sm"
+                        (tap)="onTap(message.Id)" backgroundColor="#ddd">
+                        <Label [text]="message.Title" class="center center-text" verticalAlignment="center"></Label>
+                        <Image src="~/images/blank.png" stretch="aspectFill"></Image>
+                        <Image [src]="message.SmallTileImageUrl" stretch="aspectFill"></Image>
+                    </GridLayout>
+                </GridLayout>
+
+            </ScrollView>
+        </DockLayout>
+    </loading-view>
+</custom-nav>

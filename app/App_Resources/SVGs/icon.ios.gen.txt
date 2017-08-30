@@ -1,0 +1,28 @@
+29x29 iOS/Assets.xcassets/AppIcon.appiconset/icon-29.png
+x2 iOS/Assets.xcassets/AppIcon.appiconset/icon-29@2x.png
+x3 iOS/Assets.xcassets/AppIcon.appiconset/icon-29@3x.png
+
+40x40 iOS/Assets.xcassets/AppIcon.appiconset/icon-40.png
+x2 iOS/Assets.xcassets/AppIcon.appiconset/icon-40@2x.png
+x3 iOS/Assets.xcassets/AppIcon.appiconset/icon-40@3x.png
+
+50x50 iOS/Assets.xcassets/AppIcon.appiconset/icon-50.png
+x2 iOS/Assets.xcassets/AppIcon.appiconset/icon-50@2x.png
+
+57x57 iOS/Assets.xcassets/AppIcon.appiconset/icon-57.png
+x2 iOS/Assets.xcassets/AppIcon.appiconset/icon-57@2x.png
+
+60x60
+x2 iOS/Assets.xcassets/AppIcon.appiconset/icon-60@2x.png
+x3 iOS/Assets.xcassets/AppIcon.appiconset/icon-60@3x.png
+
+72x72 iOS/Assets.xcassets/AppIcon.appiconset/icon-72.png
+x2 iOS/Assets.xcassets/AppIcon.appiconset/icon-72@2x.png
+
+76x76 iOS/Assets.xcassets/AppIcon.appiconset/icon-76.png
+x2 iOS/Assets.xcassets/AppIcon.appiconset/icon-76@2x.png
+
+167x167 iOS/Assets.xcassets/AppIcon.appiconset/icon-83.5@2x.png
+
+512x512 iOS/Assets.xcassets/AppIcon.appiconset/iTunesArtwork.png
+1024x1024 iOS/Assets.xcassets/AppIcon.appiconset/iTunesArtwork@2x.png

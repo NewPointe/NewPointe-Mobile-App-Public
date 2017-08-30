@@ -1,0 +1,27 @@
+<custom-nav title="Create an Account">
+    <ScrollView>
+        <StackLayout class="main-content">
+
+            <Image src="res://logo" class="logo-header"></Image>
+
+            <TextField #firstNameElement hint="First Name" [(ngModel)]="registerData.FirstName" [isEnabled]="!isBusy" autocapitalizationType="words"
+                autocorrect="false" returnKeyType="next" (returnPress)="tryFocusElement(lastNameElement)"></TextField>
+
+            <TextField #lastNameElement hint="Last Name" [(ngModel)]="registerData.LastName" [isEnabled]="!isBusy" autocapitalizationType="words" autocorrect="false"
+                returnKeyType="next" (returnPress)="tryFocusElement(emailElement)"></TextField>
+
+            <TextField #emailElement hint="Email Address" [(ngModel)]="registerData.Email" [isEnabled]="!isBusy" autocapitalizationType="none" autocorrect="false"
+                keyboardType="email" returnKeyType="next" (returnPress)="tryFocusElement(usernameElement)"></TextField>
+
+            <TextField #usernameElement hint="Username" [(ngModel)]="registerData.Username" [isEnabled]="!isBusy" autocapitalizationType="none" autocorrect="false"
+                returnKeyType="next" (returnPress)="tryFocusElement(passwordElement)"></TextField>
+
+            <TextField #passwordElement hint="Password" [(ngModel)]="registerData.Password" [isEnabled]="!isBusy" autocapitalizationType="none" autocorrect="false"
+                returnKeyType="done" (returnPress)="submit()" secure="true"></TextField>
+
+            <ActivityIndicator *ngIf="isBusy" [busy]="isBusy" class="btn btn-newpointe"></ActivityIndicator>
+            <Button text="Submit" *ngIf="!isBusy" [isEnabled]="!isBusy" class="btn btn-newpointe" (tap)="submit()"></Button>
+
+        </StackLayout>
+    </ScrollView>
+</custom-nav>

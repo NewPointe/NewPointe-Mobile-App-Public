@@ -1,0 +1,15 @@
+export { AboutComponent } from "./about/about.component";
+export { AudioPlayerComponent } from "./audioplayer/audioplayer.component";
+export { EventsComponent } from "./events/events.component";
+export { HomeComponent } from "./home/home.component";
+export { LiveComponent } from "./live/live.component";
+export { LoginComponent } from "./login/login.component";
+export { MessagesComponent } from "./messages/messages.component";
+export { MessageNotesComponent } from "./messages/message-notes.component";
+export { MessageItemsComponent } from "./messages/message-items.component";
+export { CustomNotesComponent } from "./messages/custom-notes.component";
+export { PrayerComponent } from "./prayer/prayer.component";
+export { ProfileComponent } from "./profile/profile.component";
+export { RegisterComponent } from "./register/register.component";
+export { TheDailyComponent } from "./thedaily/thedaily.component";
+export { VideoPlayerComponent } from "./videoplayer/videoplayer.component";

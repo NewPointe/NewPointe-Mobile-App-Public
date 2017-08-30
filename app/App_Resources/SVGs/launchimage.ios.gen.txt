@@ -1,0 +1,22 @@
+0x0-495x495
+
+414x736
+x3-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default-736h@3x.png
+
+736x414
+x3-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape@3x.png
+
+375x667
+x2-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default-667h@2x.png
+
+320x568
+x2-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default-568h@2x.png
+
+768x1024-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default-Portrait.png
+x2-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default-Portrait@2x.png
+
+1024x768-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape.png
+x2-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default-Landscape@2x.png
+
+320x480-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default.png
+x2-x1 iOS/Assets.xcassets/LaunchImage.launchimage/Default@2x.png

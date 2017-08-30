@@ -1,0 +1,10 @@
+export { AboutService } from "./about.service";
+export { AudioPlayerService } from "./audioplayer.service";
+export { AuthService } from "./auth.service";
+export { CalendarEventsService } from "./calendar-events.service";
+export { CustomNotesService } from "./custom-notes.service";
+export { LiveService } from "./live.service";
+export { MessageArchiveService } from "./message-archive.service";
+export { PrayerService } from "./prayer.service";
+export { TheDailyService } from "./thedaily.service";
+export { UserProfileService } from "./userprofile.service";
