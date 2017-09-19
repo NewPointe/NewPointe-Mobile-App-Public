@@ -8,7 +8,7 @@ import { ScrollView } from "ui/scroll-view";
 
 import app = require("application");
 
-import { getOrientation } from "nativescript-orientation";
+import { getOrientation } from "../../shared/orientation-util";
 
 import { MessageArchiveItem, MessageArchiveService } from "../../services/message-archive.service";
 

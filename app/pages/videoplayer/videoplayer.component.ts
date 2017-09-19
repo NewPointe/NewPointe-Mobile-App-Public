@@ -4,7 +4,7 @@ import { RouterExtensions } from "nativescript-angular/router";
 import { Page } from "ui/page";
 import { DeviceOrientation } from "ui/enums";
 
-import { getOrientation } from "nativescript-orientation";
+import { getOrientation } from "../../shared/orientation-util";
 import { Video } from "nativescript-videoplayer";
 import { device } from "platform";
 import app = require("application");

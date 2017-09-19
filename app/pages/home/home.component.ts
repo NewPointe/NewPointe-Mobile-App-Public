@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
 import { RouterExtensions } from "nativescript-angular/router";
 import { openUrl } from "utils/utils";
 import { DeviceOrientation } from 'ui/enums';
-import { getOrientation } from "nativescript-orientation";
+import { getOrientation } from "../../shared/orientation-util";
 import * as app from "application";
 
 import { AuthService } from "../../services/auth.service";

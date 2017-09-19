@@ -1,7 +1,7 @@
 import { Component, ViewChild, OnInit } from "@angular/core";
 
-import { RadCalendar, CalendarEvent } from "nativescript-telerik-ui-pro/calendar/";
-import { RadCalendarComponent } from 'nativescript-telerik-ui-pro/calendar/angular';
+import { RadCalendar, CalendarEvent } from "nativescript-pro-ui/calendar/";
+import { RadCalendarComponent } from 'nativescript-pro-ui/calendar/angular';
 
 import { CalendarEventsService } from "../../services/calendar-events.service";
 

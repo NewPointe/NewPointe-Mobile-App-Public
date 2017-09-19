@@ -20,7 +20,14 @@ export class PrayerService {
             content: JSON.stringify(prayer),
             headers: { "Content-Type": "application/json" }
         }).then(
-            response => (response.statusCode >= 200 && response.statusCode < 400) ? response : Promise.reject(new Error(`Error sending request: (${response.statusCode}) '${response.content}'`))
+            response => {
+                if (response.statusCode >= 200 && response.statusCode < 400) {
+                    return Promise.resolve(response);
+                 }
+                 else {
+                     return Promise.reject(new Error(`Error sending request: (${response.statusCode}) '${response.content}'`));
+                 } 
+            }
         );
     }
 

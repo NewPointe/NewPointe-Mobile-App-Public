@@ -1,13 +1,12 @@
-import { Component, AfterViewInit, ViewChild, ChangeDetectionStrategy, ElementRef, ChangeDetectorRef } from "@angular/core";
+import { Component, AfterViewInit, ChangeDetectorRef } from "@angular/core";
 import { Page } from "ui/page";
 import { ActivatedRoute } from '@angular/router';
 import { RouterExtensions } from "nativescript-angular/router";
 import { openUrl } from "utils/utils";
-import { Color } from "color";
+import { SegmentedBar, SegmentedBarItem } from "ui/segmented-bar";
 
 import { MessageArchiveIndividualItem, MessageArchiveService } from "../../services/message-archive.service";
 import { AudioPlayerService } from "../../services/audioplayer.service";
-import { Config } from "../../shared/config";
 
 @Component({
     moduleId: module.id,
@@ -19,11 +18,24 @@ export class MessageItemsComponent implements AfterViewInit {
 
     private messages: Array<MessageArchiveIndividualItem>;
 
-    private currentItem: MessageArchiveIndividualItem;
+    private currentItem: MessageArchiveIndividualItem = {
+        Id: -1,
+        Title: "",
+        Date: "",
+        Speaker: "",
+        SpeakerTitle: "",
+        VimeoLink: "",
+        VimeoImage: "",
+        AudioImage: "",
+        AudioLink: "",
+        Content: "",
+        Notes: "",
+        TalkItOver: ""
+    };
 
 
     private loadingState = 0;
-    private navbarItems = [];
+    private navbarItems: Array<SegmentedBarItem> = [];
 
     private showVideo = false;
     private showNotes = false;
@@ -42,13 +54,22 @@ export class MessageItemsComponent implements AfterViewInit {
     ngAfterViewInit() {
         this._messageArchiveService.getMessagesForSeries(this.route.snapshot.params["id"]).then(
             messages => {
-                this.messages = messages;
+                if (messages[0]) {
+                    this.messages = messages;
 
-                let titles = [];
-                this.messages.forEach((m, i) => titles.push({ title: `Part ${i + 1}` }));
-                this.navbarItems = titles;
+                    this.navbarItems = [];
+                    this.messages.forEach((m, i) => {
+                        const item = new SegmentedBarItem();
+                        item.title = `Part ${i + 1}`;
+                        this.navbarItems.push( item );
+                    });
 
-                this.loadingState = 1;
+                    this.loadingState = 1;
+                }
+                else {
+
+                    this.loadingState = -1;
+                }
             },
             error => {
                 this.loadingState = -1;
@@ -95,8 +116,8 @@ export class MessageItemsComponent implements AfterViewInit {
             metadata: {
                 title: this.currentItem.Title,
                 subtitle: this.currentItem.Speaker,
-             },
-             albumArtUri: this.currentItem.AudioImage
+            },
+            albumArtUri: this.currentItem.AudioImage
         };
         this._routerExtentions.navigate(['/audioplayer']);
     }

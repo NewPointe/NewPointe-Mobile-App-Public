@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { getJSON } from "http";
 import { Config } from "../shared/config";
 
-import { Calendar } from "nativescript-telerik-ui-pro/calendar/angular";
+import { CalendarEvent } from "nativescript-pro-ui/calendar";
 import { Color } from "color";
 
 const colors: Array<Color> = [new Color(200, 188, 26, 214), new Color(220, 255, 109, 130), new Color(255, 55, 45, 255), new Color(199, 17, 227, 10), new Color(255, 255, 54, 3)];
@@ -18,7 +18,7 @@ export class CalendarEventsService {
                 const startDate = new Date(+event.start + timeZoneDiff);
                 const endDate = new Date(+event.end + timeZoneDiff);
 
-                return new Calendar.CalendarEvent(
+                return new CalendarEvent(
                     event.title,
                     startDate,
                     endDate,

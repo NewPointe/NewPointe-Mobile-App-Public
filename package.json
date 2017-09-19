@@ -2,46 +2,55 @@
   "name": "newpointe-app",
   "version": "2.0.0",
   "description": "NewPointe Mobile App",
+  "keywords": [
+    "NativeScript",
+    "NewPointe"
+  ],
+  "homepage": "https://github.com/NewPointe/NewPointe-Mobile-App-Public/",
+  "bugs": {
+    "url": "https://github.com/NewPointe/NewPointe-Mobile-App-Public/issues"
+  },
   "license": "SEE LICENSE IN <your-license-filename>",
-  "repository": "https://github.com/NewPointe/NewPointe-Mobile-App-Public",
+  "author": "Tyler Schrock <tschrock@newpointe.org>",
+  "contributors": [
+    "Shane Hawk <shnhwk@gmail.com>"
+  ],
+  "repository": "NewPointe/NewPointe-Mobile-App-Public",
   "nativescript": {
     "id": "org.newpointe.NewPointeCommunityChurch",
     "tns-android": {
-      "version": "2.5.0"
+      "version": "3.2.0"
     },
     "tns-ios": {
-      "version": "2.5.0"
+      "version": "3.2.0"
     }
   },
   "dependencies": {
-    "@angular/common": "~4.0.0",
-    "@angular/compiler": "~4.0.0",
-    "@angular/core": "~4.0.0",
-    "@angular/forms": "~4.0.0",
-    "@angular/http": "~4.0.0",
-    "@angular/platform-browser": "~4.0.0",
-    "@angular/platform-browser-dynamic": "~4.0.0",
-    "@angular/router": "~4.0.0",
-    "nativescript-angular": "~1.5.1",
-    "nativescript-angular-snapshot": "1.5.2-5.5.372.32",
-    "nativescript-iqkeyboardmanager": "^1.0.1",
+    "@angular/common": "~4.4.1",
+    "@angular/compiler": "~4.4.1",
+    "@angular/core": "~4.4.1",
+    "@angular/forms": "~4.4.1",
+    "@angular/http": "~4.4.1",
+    "@angular/platform-browser": "~4.4.1",
+    "@angular/platform-browser-dynamic": "~4.4.1",
+    "@angular/router": "~4.4.1",
+    "nativescript-angular": "~4.2.0",
+    "nativescript-iqkeyboardmanager": "~1.1.0",
     "nativescript-np-audioplayer": "NewPointe/nativescript-np-audioplayer",
-    "nativescript-orientation": "~1.5.3",
-    "nativescript-swiss-army-knife": "^*",
-    "nativescript-telerik-ui-pro": "file:nativescript-ui-pro.tgz",
-    "nativescript-videoplayer": "~1.1.3",
-    "reflect-metadata": "~0.1.8",
-    "rxjs": "~5.2.0",
-    "tns-core-modules": "2.5.2",
-    "zone.js": "~0.8.2"
+    "nativescript-pro-ui": "~3.1.2",
+    "nativescript-swiss-army-knife": "~3.0.0",
+    "nativescript-videoplayer": "~3.0.9",
+    "reflect-metadata": "~0.1.10",
+    "rxjs": "~5.4.3",
+    "tns-core-modules": "~3.2.0",
+    "zone.js": "~0.8.17"
   },
   "devDependencies": {
-    "babel-traverse": "6.24.1",
-    "babel-types": "6.24.1",
-    "babylon": "6.17.0",
-    "lazy": "1.0.11",
-    "nativescript-dev-android-snapshot": "0.0.9",
-    "nativescript-dev-typescript": "~0.3.5",
-    "typescript": "~2.1.0"
+    "babel-traverse": "~6.26.0",
+    "babel-types": "~6.26.0",
+    "babylon": "~6.18.0",
+    "lazy": "~1.0.11",
+    "nativescript-dev-typescript": "^0.5.0",
+    "typescript": "^2.5.2"
   }
 }

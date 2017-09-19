@@ -5,7 +5,7 @@ import { openUrl } from "utils/utils";
 import { isIOS } from "platform";
 
 import { SwissArmyKnife } from 'nativescript-swiss-army-knife/nativescript-swiss-army-knife';
-import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui-pro/sidedrawer/angular";
+import { RadSideDrawerComponent, SideDrawerType } from "nativescript-pro-ui/sidedrawer/angular";
 
 import { AuthService } from "../../services/auth.service";
 import { Config } from "../../shared/config";

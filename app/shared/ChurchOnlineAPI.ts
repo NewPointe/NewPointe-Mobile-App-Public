@@ -8,7 +8,7 @@ export class ChurchOnlineAPI {
         return getJSON<ChurchOnlineAPIResponse<T>>(url).then(
             resp =>
                 (resp.meta && resp.meta.status == 200) ?
-                    resp.response :
+                    Promise.resolve(resp.response) :
                     Promise.reject(new Error("Error getting live info: Invalid Request Status"))
         );
     }
