@@ -8,6 +8,7 @@ import * as app from "application";
 import { AuthService } from "../../services/auth.service";
 import { Config } from "../../shared/config";
 import { LiveService } from "../../services/live.service";
+import { FeatureTileService } from "../../services/feature-tile.service";
 
 const tiles = [
     {
@@ -69,7 +70,9 @@ export class HomeComponent implements OnInit {
         private _routerExtensions: RouterExtensions,
         private _liveService: LiveService,
         private _changeDetectorRef: ChangeDetectorRef,
-        private _authService: AuthService) { }
+        private _authService: AuthService,
+        private _featureTileService: FeatureTileService
+    ) { }
 
     get IsLive() {
         return this._liveService.isLive;
@@ -80,12 +83,22 @@ export class HomeComponent implements OnInit {
 
     private tiles = tiles;
 
+    private featureTileUrl = Config.FeatureTileUrl;
+    private featureTileImage = Config.FeatureTileImage;
+
     ngOnInit() {
         if (Config.SkipLogin !== "1" && !this._authService.getUserToken()) {
             this._routerExtensions.navigate(["/login"]);
         }
         app.on(app.orientationChangedEvent, this.onOrientationChange);
         this.onOrientationChange(getOrientation());
+        this._featureTileService.getFeatureTile().then(
+            result => {
+                Config.FeatureTileImage = this.featureTileImage = result[0]
+                Config.FeatureTileUrl = this.featureTileUrl = result[1];
+            },
+            error => { console.log(error); }
+        )
     }
 
     ngOnDestroy() {

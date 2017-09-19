@@ -3,6 +3,7 @@ export { AudioPlayerService } from "./audioplayer.service";
 export { AuthService } from "./auth.service";
 export { CalendarEventsService } from "./calendar-events.service";
 export { CustomNotesService } from "./custom-notes.service";
+export { FeatureTileService } from "./feature-tile.service";
 export { LiveService } from "./live.service";
 export { MessageArchiveService } from "./message-archive.service";
 export { PrayerService } from "./prayer.service";
