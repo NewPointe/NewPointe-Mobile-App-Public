@@ -1,4 +1,4 @@
-import { NgModule, enableProdMode } from "@angular/core";
+import { NgModule, enableProdMode, NO_ERRORS_SCHEMA } from "@angular/core";
 enableProdMode();
 
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -7,9 +7,9 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { PreloadAllModules } from "@angular/router";
 
-import { SIDEDRAWER_DIRECTIVES } from "nativescript-pro-ui/sidedrawer/angular";
-import { LISTVIEW_DIRECTIVES } from 'nativescript-pro-ui/listview/angular';
-import { CALENDAR_DIRECTIVES } from 'nativescript-pro-ui/calendar/angular';
+import { NativeScriptUISideDrawerModule } from "nativescript-pro-ui/sidedrawer/angular";
+import { NativeScriptUIListViewModule } from 'nativescript-pro-ui/listview/angular';
+import { NativeScriptUICalendarModule } from 'nativescript-pro-ui/calendar/angular';
 
 import { AppComponent } from "./app.component";
 import { appRoutes } from "./app.routes";
@@ -18,26 +18,84 @@ import { CustomNavComponent } from "./shared/custom-nav/custom-nav.component";
 import { LoadingViewComponent } from "./shared/loading-view/loading-view.component";
 import { SeekbarComponent } from "./shared/seekbar/seekbar.component";
 
-import * as Services from "./services";
+import {
+    AboutComponent,
+    AudioPlayerComponent,
+    EventsComponent,
+    HomeComponent,
+    LiveComponent,
+    LoginComponent,
+    MessagesComponent,
+    MessageNotesComponent,
+    MessageItemsComponent,
+    CustomNotesComponent,
+    PrayerComponent,
+    ProfileComponent,
+    RegisterComponent,
+    TheDailyComponent,
+    VideoPlayerComponent
+} from "./pages";
+
+import {
+    AboutService,
+    AudioPlayerService,
+    AuthService,
+    CalendarEventsService,
+    CustomNotesService,
+    FeatureTileService,
+    LiveService,
+    MessageArchiveService,
+    PrayerService,
+    TheDailyService,
+    UserProfileService
+} from "./services";
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [
         NativeScriptModule,
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
-        NativeScriptFormsModule
+        NativeScriptFormsModule,
+        NativeScriptUISideDrawerModule,
+        NativeScriptUIListViewModule,
+        NativeScriptUICalendarModule
     ],
     declarations: [
-        SIDEDRAWER_DIRECTIVES,
-        LISTVIEW_DIRECTIVES,
-        CALENDAR_DIRECTIVES,
         CustomNavComponent,
         LoadingViewComponent,
         SeekbarComponent,
         AppComponent,
-        ...appRoutes.filter(p => !!p.component).map(p => p.component)
+        AboutComponent,
+        AudioPlayerComponent,
+        EventsComponent,
+        HomeComponent,
+        LiveComponent,
+        LoginComponent,
+        MessagesComponent,
+        MessageNotesComponent,
+        MessageItemsComponent,
+        CustomNotesComponent,
+        PrayerComponent,
+        ProfileComponent,
+        RegisterComponent,
+        TheDailyComponent,
+        VideoPlayerComponent
     ],
     bootstrap: [AppComponent],
-    providers: [...Object.keys(Services).map(k => Services[k]), AuthGuard]
+    providers: [
+        AuthGuard,
+        AboutService,
+        AudioPlayerService,
+        AuthService,
+        CalendarEventsService,
+        CustomNotesService,
+        FeatureTileService,
+        LiveService,
+        MessageArchiveService,
+        PrayerService,
+        TheDailyService,
+        UserProfileService
+    ]
 })
 export class AppModule { }

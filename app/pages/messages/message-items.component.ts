@@ -34,7 +34,7 @@ export class MessageItemsComponent implements AfterViewInit {
     };
 
 
-    private loadingState = 0;
+    public loadingState = 0;
     private navbarItems: Array<SegmentedBarItem> = [];
 
     private showVideo = false;

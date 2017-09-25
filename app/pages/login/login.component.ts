@@ -18,12 +18,12 @@ import { UserCredentials, AuthService } from "../../services/auth.service";
 export class LoginComponent implements AfterViewInit {
 
     user: UserCredentials = new UserCredentials();
-    private isLoading = false;
+    public isLoading = false;
 
     @ViewChild("username") usernameElement: ElementRef;
     @ViewChild("password") passwordElement: ElementRef;
 
-    private tryFocusElement(element: ElementRef) {
+    public tryFocusElement(element: ElementRef) {
         if (element && element.nativeElement && element.nativeElement.focus) {
             element.nativeElement.focus();
         }

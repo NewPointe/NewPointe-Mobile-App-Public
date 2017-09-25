@@ -23,7 +23,7 @@ export class RegisterComponent implements AfterViewInit {
     @ViewChild("usernameElement") usernameElement: ElementRef;
     @ViewChild("passwordElement") passwordElement: ElementRef;
 
-    private tryFocusElement(element: ElementRef) {
+    public tryFocusElement(element: ElementRef) {
         if (element && element.nativeElement && element.nativeElement.focus) {
             element.nativeElement.focus();
         }

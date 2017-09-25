@@ -144,10 +144,10 @@ export class CustomNavComponent implements OnInit {
 
     @ViewChild("scrollComponent") scrollComponent: ElementRef;
 
-    private loggedInName = "";
-    private loggedInEmail = "";
+    public loggedInName = "";
+    public loggedInEmail = "";
 
-    private showBack = false;
+    public showBack = false;
 
     private statuBarHeight: number = 0;
 

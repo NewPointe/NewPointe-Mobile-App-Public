@@ -54,7 +54,7 @@ export class SeekbarComponent extends Observable {
     @Output() public seekCancel = new EventEmitter();
     
     private trueValue = 50;
-    private seekValue = 50;
+    public seekValue = 50;
     private isSeeking = false;
 
     private slowSeekOriginalValue = 0;

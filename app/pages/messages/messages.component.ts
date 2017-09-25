@@ -23,18 +23,18 @@ const delta = 0.01;
 })
 export class MessagesComponent implements OnInit {
 
-    private loadingState = 0;
+    public loadingState = 0;
 
     private messageSeries: Array<MessageArchiveItem>;
 
-    private currentMessages = new Array<MessageArchiveItem>();
+    public currentMessages = new Array<MessageArchiveItem>();
     private pageNumber = 0;
 
-    private showPrevious = false;
-    private showNext = false;
+    public showPrevious = false;
+    public showNext = false;
 
-    private colCount = 2;
-    private colSizing = "*,*";
+    public colCount = 2;
+    public colSizing = "*,*";
 
     @ViewChild('scrollView') private scrollViewElement: ElementRef;
     private scrollView: ScrollView;

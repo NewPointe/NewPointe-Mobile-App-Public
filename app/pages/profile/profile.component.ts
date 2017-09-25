@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit {
     @ViewChild("lastName") lastNameElement: ElementRef;
     @ViewChild("email") emailElement: ElementRef;
 
-    private tryFocusElement(element: ElementRef) {
+    public tryFocusElement(element: ElementRef) {
         if (element && element.nativeElement && element.nativeElement.focus) {
             element.nativeElement.focus();
         }

@@ -18,19 +18,19 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "S
 })
 export class TheDailyComponent implements OnInit {
 
-    private loadingState = 0;
+    public loadingState = 0;
 
     private dailyIds: Array<number> = [];
 
     private pageNumber = 0;
 
-    private showPrevious = false;
-    private showNext = false;
+    public showPrevious = false;
+    public showNext = false;
 
-    private currentDaily: TheDailyItem;
+    public currentDaily: TheDailyItem;
 
-    private showPDF = false;
-    private showScripture = false;
+    public showPDF = false;
+    public showScripture = false;
 
     @ViewChild('scrollView') private scrollViewElement: ElementRef;
     private scrollView: ScrollView;

@@ -29,14 +29,14 @@ function calcPercent(part: number, total: number) {
 })
 export class AudioPlayerComponent implements OnInit, OnDestroy {
 
-    private playerTitle = "--";
-    private playerSubtitle = "--";
-    private playerImageURI;
+    public playerTitle = "--";
+    public playerSubtitle = "--";
+    public playerImageURI;
     private playerImageCache;
-    private playerPlayButtonText = MaterialIcons.Play;
-    private playerTimelineProgress = 0;
-    private playerTimecodeText = "-:-- / -:--";
-    private playerTimecodeWidth = 60;
+    public playerPlayButtonText = MaterialIcons.Play;
+    public playerTimelineProgress = 0;
+    public playerTimecodeText = "-:-- / -:--";
+    public playerTimecodeWidth = 60;
     private _playerPropertyChangedListener;
 
     constructor(private _changeDetectorRef: ChangeDetectorRef, private _audioPlayerService: AudioPlayerService) { }

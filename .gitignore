@@ -5,3 +5,6 @@
 /app/**/*.js.map
 /lib/
 /hooks
+/NewPointeCommunityChurch.keystore
+/report
+/.vscode

@@ -22,7 +22,7 @@ export class PrayerComponent implements AfterViewInit {
     @ViewChild("emailElement") emailElement: ElementRef;
     @ViewChild("prayerElement") prayerElement: ElementRef;
 
-    private tryFocusElement(element: ElementRef) {
+    public tryFocusElement(element: ElementRef) {
         if (element && element.nativeElement && element.nativeElement.focus) {
             // Slight timeout to prevent prayer textview getting a newline >.>
             setTimeout( () => element.nativeElement.focus(), 10);

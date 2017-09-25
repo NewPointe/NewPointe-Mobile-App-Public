@@ -12,11 +12,11 @@ import { CalendarEventsService } from "../../services/calendar-events.service";
 })
 export class EventsComponent implements OnInit {
 
-    private events: Array<CalendarEvent>;
-    private loadingState;
+    public events: Array<CalendarEvent>;
+    public loadingState;
 
     @ViewChild(RadCalendarComponent) private calendarComponent: RadCalendarComponent;
-    protected calendar: RadCalendar;
+    public calendar: RadCalendar;
 
     constructor(private _calendarService: CalendarEventsService) { }
 

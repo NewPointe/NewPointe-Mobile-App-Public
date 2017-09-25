@@ -78,13 +78,13 @@ export class HomeComponent implements OnInit {
         return this._liveService.isLive;
     }
 
-    private colCount = 2;
-    private colSizing = "*,*";
+    public colCount = 2;
+    public colSizing = "*,*";
 
-    private tiles = tiles;
+    public tiles = tiles;
 
-    private featureTileUrl = Config.FeatureTileUrl;
-    private featureTileImage = Config.FeatureTileImage;
+    public featureTileUrl = Config.FeatureTileUrl;
+    public featureTileImage = Config.FeatureTileImage;
 
     ngOnInit() {
         if (Config.SkipLogin !== "1" && !this._authService.getUserToken()) {

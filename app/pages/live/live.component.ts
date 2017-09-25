@@ -11,7 +11,7 @@ import { Config } from "../../shared/config";
 })
 export class LiveComponent {
 
-    constructor(private _router: Router, private _audioService: AudioPlayerService) { }
+    constructor(public _router: Router, private _audioService: AudioPlayerService) { }
 
     gotoLiveVideo() {
         this._router.navigate(['/videoplayer', encodeURIComponent(Config.liveVideoUrl)]);

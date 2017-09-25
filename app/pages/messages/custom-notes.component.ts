@@ -12,7 +12,7 @@ import { Config } from "../../shared/config";
 })
 export class CustomNotesComponent implements OnInit {
 
-    private loadingState = 0;
+    public loadingState = 0;
     customNote: CustomNote = new CustomNote();
 
     noteBoxEnabled = false;
