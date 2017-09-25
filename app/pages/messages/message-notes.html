@@ -4,6 +4,6 @@
 </ActionBar>
 <loading-view [loadingState]="loadingState" errorMessage="Error loading message notes. Please make sure you are connected to the internet.">
 
-    <WebView [url]="link" (loadFinished)="onLoadFinished()" height="100%" width="100%"></WebView>
+    <WebView [src]="link" (loadFinished)="onLoadFinished()" height="100%" width="100%"></WebView>
 
 </loading-view>
