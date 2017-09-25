@@ -12,6 +12,11 @@ import { FeatureTileService } from "../../services/feature-tile.service";
 
 const tiles = [
     {
+        title: "Small Groups",
+        tile: "~/images/SmallGroups.png",
+        url: "https://newpointe.org/SmallGroups"
+    },
+    {
         title: "Events",
         tile: "~/images/Events.png",
         url: "app://events"
